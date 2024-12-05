@@ -5,3 +5,7 @@ share/
 pyvenv.cfg
 *.pyc
 __pycache__/
+docs/source
+docs/build
+lib64
+
