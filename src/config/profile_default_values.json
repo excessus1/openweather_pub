@@ -1,0 +1,23 @@
+{
+  "time_machine": {
+    "limit_per_day": 800,
+    "batch_limit": 10,
+    "hours_history": 240000
+  },
+  "daily_summary": {
+    "limit_per_day": 100,
+    "batch_limit": 10,
+    "days_history": 10000
+  },
+  "location": {
+    "latitude": 44.429764,
+    "longitude": -110.584663
+  },
+  "history": {
+    "TIME_MACHINE_HISTORY_START": "1970-02-01 00:00:00",
+    "TIME_MACHINE_HISTORY_STOP": "1970-01-01 00:00:00",
+    "DAILY_SUMMARY_HISTORY_START": "1970-02-01 00:00:00",
+    "DAILY_SUMMARY_HISTORY_STOP": "1970-01-01 00:00:00"
+
+  }
+}

@@ -8,4 +8,8 @@ __pycache__/
 docs/source
 docs/build
 lib64
+src/services/*.enc
+docs/
+data/logs
+data/batch_files
 

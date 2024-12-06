@@ -1,0 +1,68 @@
+{
+  "time_machine": {
+    "limit_per_day": {
+      "type": "int",
+      "min": 0,
+      "max": 800
+    },
+    "batch_limit": {
+      "type": "int",
+      "min": 1,
+      "max": 800
+    },
+    "hours_history": {
+      "type": "int",
+      "min": 0
+    }
+  },
+  "daily_summary": {
+    "limit_per_day": {
+      "type": "int",
+      "min": 0,
+      "max": 100
+    },
+    "batch_limit": {
+      "type": "int",
+      "min": 1,
+      "max": 100
+    },
+    "days_history": {
+      "type": "int",
+      "min": 0
+    }
+  },
+  "location": {
+    "latitude": {
+      "type": "float",
+      "min": -90.0,
+      "max": 90.0
+    },
+    "longitude": {
+      "type": "float",
+      "min": -180.0,
+      "max": 180.0
+    }
+  },
+  "history": {
+    "TIME_MACHINE_HISTORY_START": {
+      "type": "datetime",
+      "format": "YYYY-MM-DD HH:MI:SS",
+      "description": "Start date must be more recent than stop date. Enter 'recent' to use the most recent date."
+    },
+    "TIME_MACHINE_HISTORY_STOP": {
+      "type": "datetime",
+      "format": "YYYY-MM-DD HH:MI:SS",
+      "description": "Stop date must be earlier than start date."
+    },
+    "DAILY_SUMMARY_HISTORY_START": {
+      "type": "datetime",
+      "format": "YYYY-MM-DD HH:MI:SS",
+      "description": "Start date must be more recent than stop date. Enter 'recent' to use the most recent date."
+    },
+    "DAILY_SUMMARY_HISTORY_STOP": {
+      "type": "datetime",
+      "format": "YYYY-MM-DD HH:MI:SS",
+      "description": "Stop date must be earlier than start date."
+    }
+  }
+}
