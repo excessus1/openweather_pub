@@ -1,0 +1,7 @@
+ow\_db\_dashboard module
+========================
+
+.. automodule:: scripts.ow_db_dashboard
+   :members:
+   :undoc-members:
+   :show-inheritance:

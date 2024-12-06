@@ -1,0 +1,1715 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>services package &mdash; OpenWeather Collector 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ow_db_dashboard module" href="ow_db_dashboard.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OpenWeather Collector
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="admin.html">admin module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.add_credential"><code class="docutils literal notranslate"><span class="pre">add_credential()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.admin_menu"><code class="docutils literal notranslate"><span class="pre">admin_menu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.fetch_credential"><code class="docutils literal notranslate"><span class="pre">fetch_credential()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.get_api_logging_connection"><code class="docutils literal notranslate"><span class="pre">get_api_logging_connection()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.get_db_connection"><code class="docutils literal notranslate"><span class="pre">get_db_connection()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.prompt_for_key"><code class="docutils literal notranslate"><span class="pre">prompt_for_key()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.remove_credential"><code class="docutils literal notranslate"><span class="pre">remove_credential()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.show_credentials"><code class="docutils literal notranslate"><span class="pre">show_credentials()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.update_credential"><code class="docutils literal notranslate"><span class="pre">update_credential()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_control.html">api_control module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl"><code class="docutils literal notranslate"><span class="pre">APIControl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.check_daily_limit_reached"><code class="docutils literal notranslate"><span class="pre">APIControl.check_daily_limit_reached()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.check_failure_rate"><code class="docutils literal notranslate"><span class="pre">APIControl.check_failure_rate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.rate_limit_check"><code class="docutils literal notranslate"><span class="pre">APIControl.rate_limit_check()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.requests_today"><code class="docutils literal notranslate"><span class="pre">APIControl.requests_today()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.update_requests_made_today"><code class="docutils literal notranslate"><span class="pre">APIControl.update_requests_made_today()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_logger.html">api_logger module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging"><code class="docutils literal notranslate"><span class="pre">APILogging</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.log_file"><code class="docutils literal notranslate"><span class="pre">APILogging.log_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.db_connection"><code class="docutils literal notranslate"><span class="pre">APILogging.db_connection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.ensure_log_file_exists"><code class="docutils literal notranslate"><span class="pre">APILogging.ensure_log_file_exists()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.get_api_prototype"><code class="docutils literal notranslate"><span class="pre">APILogging.get_api_prototype()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.handle_sql_failure"><code class="docutils literal notranslate"><span class="pre">APILogging.handle_sql_failure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.insert_tracking_log"><code class="docutils literal notranslate"><span class="pre">APILogging.insert_tracking_log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.log_api_call"><code class="docutils literal notranslate"><span class="pre">APILogging.log_api_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.log_event"><code class="docutils literal notranslate"><span class="pre">APILogging.log_event()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.log_sql_insert"><code class="docutils literal notranslate"><span class="pre">APILogging.log_sql_insert()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config.html#src.config.config.ensure_directories_and_files"><code class="docutils literal notranslate"><span class="pre">ensure_directories_and_files()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#src.config.config.fill_credentials"><code class="docutils literal notranslate"><span class="pre">fill_credentials()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#src.config.config.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#src.config.config.set_defaults"><code class="docutils literal notranslate"><span class="pre">set_defaults()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config_menu.html">config_menu module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu"><code class="docutils literal notranslate"><span class="pre">ConfigMenu</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.clear_screen"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.clear_screen()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.create_custom_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.create_custom_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.display_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.display_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.main_menu"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.main_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.populate_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.populate_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.reset_default_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.reset_default_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.set_selected_config"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.set_selected_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.update_custom_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.update_custom_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.view_profiles"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.view_profiles()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config_manager.html">config_manager module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager"><code class="docutils literal notranslate"><span class="pre">ConfigManager</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.config_file"><code class="docutils literal notranslate"><span class="pre">ConfigManager.config_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.format_schema"><code class="docutils literal notranslate"><span class="pre">ConfigManager.format_schema</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.default_values"><code class="docutils literal notranslate"><span class="pre">ConfigManager.default_values</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.default_profile"><code class="docutils literal notranslate"><span class="pre">ConfigManager.default_profile</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.custom_profiles"><code class="docutils literal notranslate"><span class="pre">ConfigManager.custom_profiles</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.selected_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.selected_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.correct_value"><code class="docutils literal notranslate"><span class="pre">ConfigManager.correct_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.generate_profile"><code class="docutils literal notranslate"><span class="pre">ConfigManager.generate_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.load_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.load_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.load_schema"><code class="docutils literal notranslate"><span class="pre">ConfigManager.load_schema()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.reset_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.reset_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.save_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.save_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.validate_and_parse_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.validate_and_parse_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.validate_datetime"><code class="docutils literal notranslate"><span class="pre">ConfigManager.validate_datetime()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.validate_profile"><code class="docutils literal notranslate"><span class="pre">ConfigManager.validate_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.write_selected_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.write_selected_config()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="create_databases.html">create_databases module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="create_databases.html#data.database_setup.create_databases.create_database_and_tables"><code class="docutils literal notranslate"><span class="pre">create_database_and_tables()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_databases.html#data.database_setup.create_databases.load_sql"><code class="docutils literal notranslate"><span class="pre">load_sql()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_databases.html#data.database_setup.create_databases.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="credential_fetch.html">credential_fetch module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch"><code class="docutils literal notranslate"><span class="pre">CredentialFetch</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.logs_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.logs_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.log_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.log_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.db_key_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.db_key_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.log_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.log_cipher</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.db_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.db_cipher</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.api_credential_fetch"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.api_credential_fetch()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="credential_manager.html">credential_manager module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager"><code class="docutils literal notranslate"><span class="pre">CredentialManager</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.logs_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.logs_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.log_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.log_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.db_key_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.db_key_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.log_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialManager.log_cipher</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.db_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialManager.db_cipher</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.fetch_credential"><code class="docutils literal notranslate"><span class="pre">CredentialManager.fetch_credential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.get_api_logging_connection"><code class="docutils literal notranslate"><span class="pre">CredentialManager.get_api_logging_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.get_db_connection"><code class="docutils literal notranslate"><span class="pre">CredentialManager.get_db_connection()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="key_gen_menu.html">key_gen_menu module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.decrypt_message"><code class="docutils literal notranslate"><span class="pre">decrypt_message()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.encrypt_message"><code class="docutils literal notranslate"><span class="pre">encrypt_message()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.generate_new_key"><code class="docutils literal notranslate"><span class="pre">generate_new_key()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.load_from_file"><code class="docutils literal notranslate"><span class="pre">load_from_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.main_menu"><code class="docutils literal notranslate"><span class="pre">main_menu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.save_to_file"><code class="docutils literal notranslate"><span class="pre">save_to_file()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main_menu.html">main_menu module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.api_logs_submenu"><code class="docutils literal notranslate"><span class="pre">api_logs_submenu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.clear_screen"><code class="docutils literal notranslate"><span class="pre">clear_screen()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.graph_menu"><code class="docutils literal notranslate"><span class="pre">graph_menu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.location_data_submenu"><code class="docutils literal notranslate"><span class="pre">location_data_submenu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.main_menu"><code class="docutils literal notranslate"><span class="pre">main_menu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.plot_line_chart"><code class="docutils literal notranslate"><span class="pre">plot_line_chart()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.plot_wind_direction_radial"><code class="docutils literal notranslate"><span class="pre">plot_wind_direction_radial()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.plot_wind_rose"><code class="docutils literal notranslate"><span class="pre">plot_wind_rose()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.plot_word_cloud"><code class="docutils literal notranslate"><span class="pre">plot_word_cloud()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.recent_data_submenu"><code class="docutils literal notranslate"><span class="pre">recent_data_submenu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.tail_log"><code class="docutils literal notranslate"><span class="pre">tail_log()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_api_call_types"><code class="docutils literal notranslate"><span class="pre">view_api_call_types()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_api_script_tracking"><code class="docutils literal notranslate"><span class="pre">view_api_script_tracking()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_location_daily_data"><code class="docutils literal notranslate"><span class="pre">view_location_daily_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_location_hourly_data"><code class="docutils literal notranslate"><span class="pre">view_location_hourly_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_locations"><code class="docutils literal notranslate"><span class="pre">view_locations()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_api_calls"><code class="docutils literal notranslate"><span class="pre">view_recent_api_calls()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_daily_data"><code class="docutils literal notranslate"><span class="pre">view_recent_daily_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_hourly_data"><code class="docutils literal notranslate"><span class="pre">view_recent_hourly_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_logs"><code class="docutils literal notranslate"><span class="pre">view_recent_logs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_sql_handling"><code class="docutils literal notranslate"><span class="pre">view_recent_sql_handling()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openweather_historical_fill_daily.html">openweather_historical_fill_daily module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.create_batch_file"><code class="docutils literal notranslate"><span class="pre">create_batch_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.generate_missing_daily_timestamps"><code class="docutils literal notranslate"><span class="pre">generate_missing_daily_timestamps()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.parse_start_time"><code class="docutils literal notranslate"><span class="pre">parse_start_time()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.validate_time_range"><code class="docutils literal notranslate"><span class="pre">validate_time_range()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openweather_historical_fill_hourly.html">openweather_historical_fill_hourly module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.create_batch_file"><code class="docutils literal notranslate"><span class="pre">create_batch_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.generate_missing_timestamps"><code class="docutils literal notranslate"><span class="pre">generate_missing_timestamps()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.parse_start_time"><code class="docutils literal notranslate"><span class="pre">parse_start_time()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.validate_time_range"><code class="docutils literal notranslate"><span class="pre">validate_time_range()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openweather_summary.html">openweather_summary module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.json_file_path"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.json_file_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.latitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.latitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.longitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.longitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.location_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.location_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_key"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.logger"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.logger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.failed_requests"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.failed_requests</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.failed_sql_inserts"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.failed_sql_inserts</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.batch_call_requests"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.batch_call_requests</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.daily_limit"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.daily_limit</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.start_time"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.start_time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.db_connection_string"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.db_connection_string</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.platform"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.platform</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_type_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_type_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.script_name"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.script_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_alt_name"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_alt_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_type"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.control"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.control</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.call_openweather_api"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.call_openweather_api()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.check_for_duplicates"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.check_for_duplicates()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.convert_tz_to_seconds"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.convert_tz_to_seconds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.extract_and_validate_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.extract_and_validate_weather_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.human_to_unix"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.human_to_unix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.load_json_input"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.load_json_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.run"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.store_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.store_weather_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.unix_to_human"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.unix_to_human()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openweather_timemachine.html">openweather_timemachine module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.json_file_path"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.json_file_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.latitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.latitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.longitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.longitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.api_key"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.api_key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.logger"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.logger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.db_connection_string"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.db_connection_string</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.location_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.location_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.control"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.control</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.call_openweather_api"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.call_openweather_api()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.check_for_duplicates"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.check_for_duplicates()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.extract_and_validate_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.extract_and_validate_weather_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.human_to_unix"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.human_to_unix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.load_json_input"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.load_json_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.run"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.store_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.store_weather_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.unix_to_human"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.unix_to_human()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ow_db_dashboard.html">ow_db_dashboard module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ow_db_dashboard.html#scripts.ow_db_dashboard.get_status"><code class="docutils literal notranslate"><span class="pre">get_status()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ow_db_dashboard.html#scripts.ow_db_dashboard.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ow_db_dashboard.html#scripts.ow_db_dashboard.status"><code class="docutils literal notranslate"><span class="pre">status()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">services package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-services.admin">services.admin module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.add_credential"><code class="docutils literal notranslate"><span class="pre">add_credential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.admin_menu"><code class="docutils literal notranslate"><span class="pre">admin_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.fetch_credential"><code class="docutils literal notranslate"><span class="pre">fetch_credential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.get_api_logging_connection"><code class="docutils literal notranslate"><span class="pre">get_api_logging_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.get_db_connection"><code class="docutils literal notranslate"><span class="pre">get_db_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.prompt_for_key"><code class="docutils literal notranslate"><span class="pre">prompt_for_key()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.remove_credential"><code class="docutils literal notranslate"><span class="pre">remove_credential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.show_credentials"><code class="docutils literal notranslate"><span class="pre">show_credentials()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services.admin.update_credential"><code class="docutils literal notranslate"><span class="pre">update_credential()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-services.api_control">services.api_control module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#services.api_control.APIControl"><code class="docutils literal notranslate"><span class="pre">APIControl</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_control.APIControl.check_daily_limit_reached"><code class="docutils literal notranslate"><span class="pre">APIControl.check_daily_limit_reached()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_control.APIControl.check_failure_rate"><code class="docutils literal notranslate"><span class="pre">APIControl.check_failure_rate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_control.APIControl.rate_limit_check"><code class="docutils literal notranslate"><span class="pre">APIControl.rate_limit_check()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_control.APIControl.requests_today"><code class="docutils literal notranslate"><span class="pre">APIControl.requests_today()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_control.APIControl.update_requests_made_today"><code class="docutils literal notranslate"><span class="pre">APIControl.update_requests_made_today()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-services.api_logger">services.api_logger module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#services.api_logger.APILogging"><code class="docutils literal notranslate"><span class="pre">APILogging</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.log_file"><code class="docutils literal notranslate"><span class="pre">APILogging.log_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.db_connection"><code class="docutils literal notranslate"><span class="pre">APILogging.db_connection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.ensure_log_file_exists"><code class="docutils literal notranslate"><span class="pre">APILogging.ensure_log_file_exists()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.get_api_prototype"><code class="docutils literal notranslate"><span class="pre">APILogging.get_api_prototype()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.handle_sql_failure"><code class="docutils literal notranslate"><span class="pre">APILogging.handle_sql_failure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.insert_tracking_log"><code class="docutils literal notranslate"><span class="pre">APILogging.insert_tracking_log()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.log_api_call"><code class="docutils literal notranslate"><span class="pre">APILogging.log_api_call()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.log_event"><code class="docutils literal notranslate"><span class="pre">APILogging.log_event()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.api_logger.APILogging.log_sql_insert"><code class="docutils literal notranslate"><span class="pre">APILogging.log_sql_insert()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-services.credential_fetch">services.credential_fetch module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#services.credential_fetch.CredentialFetch"><code class="docutils literal notranslate"><span class="pre">CredentialFetch</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_fetch.CredentialFetch.logs_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.logs_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_fetch.CredentialFetch.log_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.log_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_fetch.CredentialFetch.db_key_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.db_key_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_fetch.CredentialFetch.log_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.log_cipher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_fetch.CredentialFetch.db_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.db_cipher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_fetch.CredentialFetch.api_credential_fetch"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.api_credential_fetch()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-services.credential_manager">services.credential_manager module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#services.credential_manager.CredentialManager"><code class="docutils literal notranslate"><span class="pre">CredentialManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_manager.CredentialManager.logs_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.logs_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_manager.CredentialManager.log_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.log_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_manager.CredentialManager.db_key_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.db_key_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_manager.CredentialManager.log_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialManager.log_cipher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_manager.CredentialManager.db_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialManager.db_cipher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_manager.CredentialManager.fetch_credential"><code class="docutils literal notranslate"><span class="pre">CredentialManager.fetch_credential()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_manager.CredentialManager.get_api_logging_connection"><code class="docutils literal notranslate"><span class="pre">CredentialManager.get_api_logging_connection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.credential_manager.CredentialManager.get_db_connection"><code class="docutils literal notranslate"><span class="pre">CredentialManager.get_db_connection()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-services.openweather_summary">services.openweather_summary module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.json_file_path"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.json_file_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.latitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.latitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.longitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.longitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.location_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.location_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.api_key"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.logger"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.failed_requests"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.failed_requests</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.failed_sql_inserts"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.failed_sql_inserts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.batch_call_requests"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.batch_call_requests</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.daily_limit"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.daily_limit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.start_time"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.start_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.db_connection_string"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.db_connection_string</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.platform"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.platform</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.api_call_type_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_type_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.script_name"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.script_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.api_call_alt_name"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_alt_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.api_call_type"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.control"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.call_openweather_api"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.call_openweather_api()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.check_for_duplicates"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.check_for_duplicates()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.convert_tz_to_seconds"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.convert_tz_to_seconds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.extract_and_validate_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.extract_and_validate_weather_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.human_to_unix"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.human_to_unix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.load_json_input"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.load_json_input()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.run"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.store_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.store_weather_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_summary.OpenWeatherDailySummary.unix_to_human"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.unix_to_human()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-services.openweather_timemachine">services.openweather_timemachine module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.json_file_path"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.json_file_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.latitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.latitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.longitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.longitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.api_key"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.api_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.logger"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.db_connection_string"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.db_connection_string</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.location_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.location_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.control"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.call_openweather_api"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.call_openweather_api()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.check_for_duplicates"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.check_for_duplicates()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.extract_and_validate_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.extract_and_validate_weather_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.human_to_unix"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.human_to_unix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.load_json_input"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.load_json_input()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.run"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.store_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.store_weather_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services.openweather_timemachine.OpenWeatherTimemachine.unix_to_human"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.unix_to_human()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-services">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenWeather Collector</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">services package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/services.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="services-package">
+<h1>services package<a class="headerlink" href="#services-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-services.admin">
+<span id="services-admin-module"></span><h2>services.admin module<a class="headerlink" href="#module-services.admin" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.add_credential">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">add_credential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.add_credential" title="Link to this definition"></a></dt>
+<dd><p>Add a new credential to the database with encrypted sensitive data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>conn</strong> (<em>psycopg2.extensions.connection</em>) – Active database connection.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.admin_menu">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">admin_menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.admin_menu" title="Link to this definition"></a></dt>
+<dd><p>Display and manage the main admin menu for credential operations.</p>
+<p>Provides options for viewing, adding, updating, and removing credentials
+stored in the database. Allows the user to exit the menu when done.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>conn</strong> – A psycopg2 connection object to the database.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Any exceptions raised by the underlying operations</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>database errors</strong><strong>)</strong> – </p></li>
+<li><p><strong>will propagate.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.fetch_credential">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">fetch_credential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.fetch_credential" title="Link to this definition"></a></dt>
+<dd><p>Retrieve a credential by its key name from the database.</p>
+<p>Fetches the <cite>username</cite>, <cite>password</cite>, and <cite>dbname</cite> fields associated with
+the specified key name. Decrypts sensitive fields before returning.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key_name</strong> (<em>str</em>) – The unique identifier for the credential.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A tuple containing:</dt><dd><ul class="simple">
+<li><p>decrypted_username (str): The decrypted username.</p></li>
+<li><p>decrypted_password (str): The decrypted password.</p></li>
+<li><p>dbname (str): The associated database name.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the key name is not found in the database.</p></li>
+<li><p><strong>RuntimeError</strong> – If an error occurs during the database operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.get_api_logging_connection">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">get_api_logging_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.get_api_logging_connection" title="Link to this definition"></a></dt>
+<dd><p>Retrieve connection string for the api_logging database from an encrypted file.</p>
+<p>This function ensures both the secret key and encrypted credentials are present,
+reads them, decrypts the credentials using the secret key, and returns the decrypted connection string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Decrypted database connection string.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If either the credentials file or the secret key file is missing.</p></li>
+<li><p><strong>RuntimeError</strong> – If decryption fails due to incorrect key or other errors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.get_db_connection">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">get_db_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.get_db_connection" title="Link to this definition"></a></dt>
+<dd><p>Establish a connection to the api_logging database using the decrypted connection string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A PostgreSQL connection object.
+None: If the connection attempt fails.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>psycopg2.extensions.connection</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.main">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.main" title="Link to this definition"></a></dt>
+<dd><p>Main entry point of the admin script.</p>
+<p>Handles the initial database connection and user authentication.
+Launches the admin menu upon successful connection. Closes the
+database connection upon exit.</p>
+<dl class="simple">
+<dt>Flow:</dt><dd><ol class="arabic simple">
+<li><p>Greet the user.</p></li>
+<li><p>Attempt to connect to the database.</p></li>
+<li><p>Display the admin menu if authentication is successful.</p></li>
+<li><p>Exit gracefully and close the database connection.</p></li>
+</ol>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the database connection fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.prompt_for_key">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">prompt_for_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.prompt_for_key" title="Link to this definition"></a></dt>
+<dd><p>Prompt the user to input a base64-encoded secret key and validates it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A Fernet encryption object initialized with the provided key.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fernet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.remove_credential">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">remove_credential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.remove_credential" title="Link to this definition"></a></dt>
+<dd><p>Remove a credential from the database.</p>
+<p>Prompts the user to specify the key name of the credential to remove,
+then deletes the associated record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>conn</strong> – A psycopg2 connection object to the database.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>psycopg2.Error</strong> – If the delete operation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.show_credentials">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">show_credentials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.show_credentials" title="Link to this definition"></a></dt>
+<dd><p>Retrieve and display non-sensitive credential metadata from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>conn</strong> (<em>psycopg2.extensions.connection</em>) – Active database connection.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="services.admin.update_credential">
+<span class="sig-prename descclassname"><span class="pre">services.admin.</span></span><span class="sig-name descname"><span class="pre">update_credential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.admin.update_credential" title="Link to this definition"></a></dt>
+<dd><p>Update an existing credential in the database.</p>
+<p>Prompts the user to specify the key name of the credential to update,
+the field to modify, and the new value for that field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>conn</strong> – A psycopg2 connection object to the database.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the specified field is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-services.api_control">
+<span id="services-api-control-module"></span><h2>services.api_control module<a class="headerlink" href="#module-services.api_control" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.api_control.APIControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">services.api_control.</span></span><span class="sig-name descname"><span class="pre">APIControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_call_type_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_call_alt_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">daily_limit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.api_control.APIControl" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_control.APIControl.check_daily_limit_reached">
+<span class="sig-name descname"><span class="pre">check_daily_limit_reached</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.api_control.APIControl.check_daily_limit_reached" title="Link to this definition"></a></dt>
+<dd><p>Check if the daily API call limit has been reached.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the daily limit has been reached, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Side Effects:</dt><dd><ul class="simple">
+<li><p>Logs daily request counts and limits.</p></li>
+<li><p>Updates the tracking table in the database when the daily limit is reached or reset.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_control.APIControl.check_failure_rate">
+<span class="sig-name descname"><span class="pre">check_failure_rate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.api_control.APIControl.check_failure_rate" title="Link to this definition"></a></dt>
+<dd><p>Check the failure rate of API calls in the last 2 minutes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the failure rate exceeds thresholds, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Failure Thresholds:</dt><dd><ul class="simple">
+<li><p>More than 10 failed calls in the last 2 minutes.</p></li>
+<li><p>Failure rate exceeds 20% of successful calls.</p></li>
+</ul>
+</dd>
+<dt>Side Effects:</dt><dd><ul class="simple">
+<li><p>Logs failure and success counts.</p></li>
+<li><p>Logs whether thresholds have been exceeded.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_control.APIControl.rate_limit_check">
+<span class="sig-name descname"><span class="pre">rate_limit_check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.api_control.APIControl.rate_limit_check" title="Link to this definition"></a></dt>
+<dd><p>Enforce a rate limit based on API calls in the last 5 minutes.</p>
+<dl class="simple">
+<dt>Side Effects:</dt><dd><ul class="simple">
+<li><p>Calculates the rate of API calls and enforces delays if needed.</p></li>
+<li><p>Logs rate limit checks and enforced delays.</p></li>
+<li><p>Sleeps for the calculated interval to maintain the rate limit.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_control.APIControl.requests_today">
+<span class="sig-name descname"><span class="pre">requests_today</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.api_control.APIControl.requests_today" title="Link to this definition"></a></dt>
+<dd><p>Get the count of API requests made since 00:00 UTC today.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of API calls made today.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_control.APIControl.update_requests_made_today">
+<span class="sig-name descname"><span class="pre">update_requests_made_today</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.api_control.APIControl.update_requests_made_today" title="Link to this definition"></a></dt>
+<dd><p>Increment the count of requests made today in the tracking table.</p>
+<dl class="simple">
+<dt>Side Effects:</dt><dd><ul class="simple">
+<li><p>Updates the <cite>requests_made_today</cite> and <cite>last_checked</cite> fields in the database.</p></li>
+<li><p>Logs the updated request count.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-services.api_logger">
+<span id="services-api-logger-module"></span><h2>services.api_logger module<a class="headerlink" href="#module-services.api_logger" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.api_logger.APILogging">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">services.api_logger.</span></span><span class="sig-name descname"><span class="pre">APILogging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PosixPath('/home/overseer/environments/openweather_pub/data/logs/openweather_api_request_log.txt')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_connection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dbname=api_logging</span> <span class="pre">user=overseer</span> <span class="pre">password=Mortis!2</span> <span class="pre">host=localhost'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.api_logger.APILogging" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>APILogging provides functionality to log API events and interactions
+into a file and a database for monitoring and debugging purposes.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.log_file">
+<span class="sig-name descname"><span class="pre">log_file</span></span><a class="headerlink" href="#services.api_logger.APILogging.log_file" title="Link to this definition"></a></dt>
+<dd><p>Path to the log file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.db_connection">
+<span class="sig-name descname"><span class="pre">db_connection</span></span><a class="headerlink" href="#services.api_logger.APILogging.db_connection" title="Link to this definition"></a></dt>
+<dd><p>Connection string for the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.ensure_log_file_exists">
+<span class="sig-name descname"><span class="pre">ensure_log_file_exists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.api_logger.APILogging.ensure_log_file_exists" title="Link to this definition"></a></dt>
+<dd><p>Ensure the log file and its directory exist.</p>
+<p>If the directory or file does not exist, they are created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.get_api_prototype">
+<span class="sig-name descname"><span class="pre">get_api_prototype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">platform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_call_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.api_logger.APILogging.get_api_prototype" title="Link to this definition"></a></dt>
+<dd><p>Retrieve the prototype structure for a given API call type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>platform</strong> (<em>str</em>) – Platform name associated with the API.</p></li>
+<li><p><strong>api_call_type</strong> (<em>str</em>) – Type of API call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Prototype of the API call.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If no prototype is found for the provided platform and type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.handle_sql_failure">
+<span class="sig-name descname"><span class="pre">handle_sql_failure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_call_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.api_logger.APILogging.handle_sql_failure" title="Link to this definition"></a></dt>
+<dd><p>Log SQL failures both to a file and the SQL handling table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_call_id</strong> (<em>int</em>) – ID of the API call that caused the failure.</p></li>
+<li><p><strong>error_message</strong> (<em>str</em>) – Description of the error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.insert_tracking_log">
+<span class="sig-name descname"><span class="pre">insert_tracking_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_call_alt_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stopped_reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.api_logger.APILogging.insert_tracking_log" title="Link to this definition"></a></dt>
+<dd><p>Insert or update tracking logs in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>script_name</strong> (<em>str</em>) – Name of the script invoking the API.</p></li>
+<li><p><strong>platform</strong> (<em>str</em>) – Platform associated with the API.</p></li>
+<li><p><strong>api_call_alt_name</strong> (<em>str</em>) – Alternative name for the API call.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – Current status of the script or call.</p></li>
+<li><p><strong>stopped_reason</strong> (<em>str</em><em>, </em><em>optional</em>) – Reason for stopping (if applicable).</p></li>
+<li><p><strong>force_restart</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether a forced restart is required.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.log_api_call">
+<span class="sig-name descname"><span class="pre">log_api_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">call_timestamp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_call_type_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_payload</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_log_message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.api_logger.APILogging.log_api_call" title="Link to this definition"></a></dt>
+<dd><p>Log details of an API call into the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>call_timestamp</strong> (<em>datetime</em>) – Timestamp of the API call.</p></li>
+<li><p><strong>api_call_type_id</strong> (<em>int</em>) – ID representing the type of API call.</p></li>
+<li><p><strong>call_event</strong> (<em>str</em>) – Event description for the call.</p></li>
+<li><p><strong>request_payload</strong> (<em>str</em>) – Payload sent in the request.</p></li>
+<li><p><strong>response_code</strong> (<em>int</em>) – HTTP response code.</p></li>
+<li><p><strong>response_message</strong> (<em>str</em>) – Message or details of the response.</p></li>
+<li><p><strong>retry_count</strong> (<em>int</em>) – Number of retries attempted.</p></li>
+<li><p><strong>call_log_message</strong> (<em>str</em>) – Log message for the call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The ID of the logged API call, or None if an error occurred.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.log_event">
+<span class="sig-name descname"><span class="pre">log_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.api_logger.APILogging.log_event" title="Link to this definition"></a></dt>
+<dd><p>Write an event to the log file with a timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong> (<em>str</em>) – Name or description of the event.</p></li>
+<li><p><strong>message</strong> (<em>str</em>) – Details or context for the event.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.api_logger.APILogging.log_sql_insert">
+<span class="sig-name descname"><span class="pre">log_sql_insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_call_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insert_timestamp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insert_status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.api_logger.APILogging.log_sql_insert" title="Link to this definition"></a></dt>
+<dd><p>Log SQL insert results into the SQL handling table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_call_id</strong> (<em>int</em>) – ID of the associated API call.</p></li>
+<li><p><strong>insert_timestamp</strong> (<em>float</em>) – Timestamp of the insert attempt.</p></li>
+<li><p><strong>insert_status</strong> (<em>str</em>) – Status of the insert attempt (e.g., ‘success’, ‘failure’).</p></li>
+<li><p><strong>error_message</strong> (<em>str</em>) – Error details (if any).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-services.credential_fetch">
+<span id="services-credential-fetch-module"></span><h2>services.credential_fetch module<a class="headerlink" href="#module-services.credential_fetch" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.credential_fetch.CredentialFetch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">services.credential_fetch.</span></span><span class="sig-name descname"><span class="pre">CredentialFetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logs_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'logs.enc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'log.enc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_key_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'base.enc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.credential_fetch.CredentialFetch" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles credential decryption and retrieval from the API logging database.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_fetch.CredentialFetch.logs_file">
+<span class="sig-name descname"><span class="pre">logs_file</span></span><a class="headerlink" href="#services.credential_fetch.CredentialFetch.logs_file" title="Link to this definition"></a></dt>
+<dd><p>Path to the encrypted logs file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_fetch.CredentialFetch.log_file">
+<span class="sig-name descname"><span class="pre">log_file</span></span><a class="headerlink" href="#services.credential_fetch.CredentialFetch.log_file" title="Link to this definition"></a></dt>
+<dd><p>Path to the encrypted log connection string file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_fetch.CredentialFetch.db_key_file">
+<span class="sig-name descname"><span class="pre">db_key_file</span></span><a class="headerlink" href="#services.credential_fetch.CredentialFetch.db_key_file" title="Link to this definition"></a></dt>
+<dd><p>Path to the encrypted database key file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_fetch.CredentialFetch.log_cipher">
+<span class="sig-name descname"><span class="pre">log_cipher</span></span><a class="headerlink" href="#services.credential_fetch.CredentialFetch.log_cipher" title="Link to this definition"></a></dt>
+<dd><p>Fernet cipher for decrypting log files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Fernet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_fetch.CredentialFetch.db_cipher">
+<span class="sig-name descname"><span class="pre">db_cipher</span></span><a class="headerlink" href="#services.credential_fetch.CredentialFetch.db_cipher" title="Link to this definition"></a></dt>
+<dd><p>Fernet cipher for decrypting database credentials.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Fernet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.credential_fetch.CredentialFetch.api_credential_fetch">
+<span class="sig-name descname"><span class="pre">api_credential_fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.credential_fetch.CredentialFetch.api_credential_fetch" title="Link to this definition"></a></dt>
+<dd><p>Fetch and decrypt the credential for the given key_name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key_name</strong> (<em>str</em>) – The key name for the desired credential.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing decrypted username, password, and database name.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the given key_name is not found in the database.</p></li>
+<li><p><strong>RuntimeError</strong> – If fetching or decryption fails for any reason.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-services.credential_manager">
+<span id="services-credential-manager-module"></span><h2>services.credential_manager module<a class="headerlink" href="#module-services.credential_manager" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">services.credential_manager.</span></span><span class="sig-name descname"><span class="pre">CredentialManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logs_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'logs.enc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'log.enc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_key_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'base.enc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.credential_manager.CredentialManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles credential encryption, decryption, and database operations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager.logs_file">
+<span class="sig-name descname"><span class="pre">logs_file</span></span><a class="headerlink" href="#services.credential_manager.CredentialManager.logs_file" title="Link to this definition"></a></dt>
+<dd><p>Path to the secret key file for unlocking log file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager.log_file">
+<span class="sig-name descname"><span class="pre">log_file</span></span><a class="headerlink" href="#services.credential_manager.CredentialManager.log_file" title="Link to this definition"></a></dt>
+<dd><p>Path to the encrypted log file containing credentials.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager.db_key_file">
+<span class="sig-name descname"><span class="pre">db_key_file</span></span><a class="headerlink" href="#services.credential_manager.CredentialManager.db_key_file" title="Link to this definition"></a></dt>
+<dd><p>Path to the database encryption key file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager.log_cipher">
+<span class="sig-name descname"><span class="pre">log_cipher</span></span><a class="headerlink" href="#services.credential_manager.CredentialManager.log_cipher" title="Link to this definition"></a></dt>
+<dd><p>Cipher for decrypting the log file (lazy-loaded).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Fernet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager.db_cipher">
+<span class="sig-name descname"><span class="pre">db_cipher</span></span><a class="headerlink" href="#services.credential_manager.CredentialManager.db_cipher" title="Link to this definition"></a></dt>
+<dd><p>Cipher for decrypting database fields (lazy-loaded).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Fernet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager.fetch_credential">
+<span class="sig-name descname"><span class="pre">fetch_credential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.credential_manager.CredentialManager.fetch_credential" title="Link to this definition"></a></dt>
+<dd><p>Fetch and decrypt a credential by its key name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key_name</strong> (<em>str</em>) – The unique key name for the credential.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Decrypted username, password, and database name.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the credential with the specified key name is not found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager.get_api_logging_connection">
+<span class="sig-name descname"><span class="pre">get_api_logging_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.credential_manager.CredentialManager.get_api_logging_connection" title="Link to this definition"></a></dt>
+<dd><p>Decrypt the log file and retrieve the database connection string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Decrypted database connection string.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If the encrypted log file does not exist.</p></li>
+<li><p><strong>RuntimeError</strong> – If decryption of the log file fails.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.credential_manager.CredentialManager.get_db_connection">
+<span class="sig-name descname"><span class="pre">get_db_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.credential_manager.CredentialManager.get_db_connection" title="Link to this definition"></a></dt>
+<dd><p>Establish a connection to the credentials database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Active database connection.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>psycopg2.extensions.connection</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If connecting to the database fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-services.openweather_summary">
+<span id="services-openweather-summary-module"></span><h2>services.openweather_summary module<a class="headerlink" href="#module-services.openweather_summary" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">services.openweather_summary.</span></span><span class="sig-name descname"><span class="pre">OpenWeatherDailySummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Fetches and stores daily weather summary data from the OpenWeather API.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.json_file_path">
+<span class="sig-name descname"><span class="pre">json_file_path</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.json_file_path" title="Link to this definition"></a></dt>
+<dd><p>Path to the input JSON file containing timestamps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.latitude">
+<span class="sig-name descname"><span class="pre">latitude</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.latitude" title="Link to this definition"></a></dt>
+<dd><p>Latitude for the API call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.longitude">
+<span class="sig-name descname"><span class="pre">longitude</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.longitude" title="Link to this definition"></a></dt>
+<dd><p>Longitude for the API call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.location_id">
+<span class="sig-name descname"><span class="pre">location_id</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.location_id" title="Link to this definition"></a></dt>
+<dd><p>Identifier for the location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.api_key">
+<span class="sig-name descname"><span class="pre">api_key</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.api_key" title="Link to this definition"></a></dt>
+<dd><p>API key for OpenWeather.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.logger" title="Link to this definition"></a></dt>
+<dd><p>Logger for tracking and debugging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging" title="src.services.api_logger.APILogging">APILogging</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.failed_requests">
+<span class="sig-name descname"><span class="pre">failed_requests</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.failed_requests" title="Link to this definition"></a></dt>
+<dd><p>Count of failed API requests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.failed_sql_inserts">
+<span class="sig-name descname"><span class="pre">failed_sql_inserts</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.failed_sql_inserts" title="Link to this definition"></a></dt>
+<dd><p>Count of failed SQL insertions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.batch_call_requests">
+<span class="sig-name descname"><span class="pre">batch_call_requests</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.batch_call_requests" title="Link to this definition"></a></dt>
+<dd><p>Count of batch API calls made.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.daily_limit">
+<span class="sig-name descname"><span class="pre">daily_limit</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.daily_limit" title="Link to this definition"></a></dt>
+<dd><p>Maximum allowed daily API calls.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.start_time">
+<span class="sig-name descname"><span class="pre">start_time</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.start_time" title="Link to this definition"></a></dt>
+<dd><p>Start time for rate-limiting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.db_connection_string">
+<span class="sig-name descname"><span class="pre">db_connection_string</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.db_connection_string" title="Link to this definition"></a></dt>
+<dd><p>Database connection string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.platform" title="Link to this definition"></a></dt>
+<dd><p>API platform name (e.g., “OpenWeather”).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.api_call_type_id">
+<span class="sig-name descname"><span class="pre">api_call_type_id</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.api_call_type_id" title="Link to this definition"></a></dt>
+<dd><p>Identifier for the API call type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.script_name">
+<span class="sig-name descname"><span class="pre">script_name</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.script_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the script invoking the API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.api_call_alt_name">
+<span class="sig-name descname"><span class="pre">api_call_alt_name</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.api_call_alt_name" title="Link to this definition"></a></dt>
+<dd><p>Alternative name for the API call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.api_call_type">
+<span class="sig-name descname"><span class="pre">api_call_type</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.api_call_type" title="Link to this definition"></a></dt>
+<dd><p>Type of API call (e.g., “Daily Aggregation”).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.control">
+<span class="sig-name descname"><span class="pre">control</span></span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.control" title="Link to this definition"></a></dt>
+<dd><p>Instance of APIControl for rate and failure checks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="api_control.html#src.services.api_control.APIControl" title="src.services.api_control.APIControl">APIControl</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.call_openweather_api">
+<span class="sig-name descname"><span class="pre">call_openweather_api</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_dates</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">completed_dates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.call_openweather_api" title="Link to this definition"></a></dt>
+<dd><p>Make an API call to OpenWeather to fetch weather summary data for a specific date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date</strong> (<em>str</em>) – Date to fetch data for.</p></li>
+<li><p><strong>total_dates</strong> (<em>int</em>) – Total number of dates being processed.</p></li>
+<li><p><strong>completed_dates</strong> (<em>int</em>) – Count of completed dates so far.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(API response data, API call ID)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>SystemExit</strong> – For critical errors (e.g., invalid API key, server-side errors).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.check_for_duplicates">
+<span class="sig-name descname"><span class="pre">check_for_duplicates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.check_for_duplicates" title="Link to this definition"></a></dt>
+<dd><p>Check for duplicate timestamps in the database and filter them out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timestamps</strong> (<em>list</em>) – List of timestamps to check.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Timestamps that are not already present in the database.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.convert_tz_to_seconds">
+<span class="sig-name descname"><span class="pre">convert_tz_to_seconds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.convert_tz_to_seconds" title="Link to this definition"></a></dt>
+<dd><p>Convert a timezone offset string to seconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tz</strong> (<em>str</em>) – Timezone offset in “+HH:MM” or “-HH:MM” format.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Offset in seconds.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.extract_and_validate_weather_data">
+<span class="sig-name descname"><span class="pre">extract_and_validate_weather_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_call_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.extract_and_validate_weather_data" title="Link to this definition"></a></dt>
+<dd><p>Extract and validate weather data from the API response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – The raw weather data from the API response.</p></li>
+<li><p><strong>api_call_id</strong> (<em>int</em>) – The ID associated with the API call for logging.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Validated weather data ready for database insertion, or None if validation fails.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.human_to_unix">
+<span class="sig-name descname"><span class="pre">human_to_unix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">human_timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.human_to_unix" title="Link to this definition"></a></dt>
+<dd><p>Convert a human-readable date to a UNIX timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>human_timestamp</strong> (<em>str</em>) – Date in “YYYY-MM-DD” format.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Corresponding UNIX timestamp.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.load_json_input">
+<span class="sig-name descname"><span class="pre">load_json_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.load_json_input" title="Link to this definition"></a></dt>
+<dd><p>Load and validate input timestamps from the JSON file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of timestamps.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>SystemExit</strong> – If the file is not found or the format is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.run" title="Link to this definition"></a></dt>
+<dd><p>Main execution method to process the input data and store validated weather summaries.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.store_weather_data">
+<span class="sig-name descname"><span class="pre">store_weather_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_call_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.store_weather_data" title="Link to this definition"></a></dt>
+<dd><p>Store validated weather data into the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Weather data to store.</p></li>
+<li><p><strong>api_call_id</strong> (<em>int</em>) – Associated API call ID.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>1 if successful, 0 if duplicate or failure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_summary.OpenWeatherDailySummary.unix_to_human">
+<span class="sig-name descname"><span class="pre">unix_to_human</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unix_timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_summary.OpenWeatherDailySummary.unix_to_human" title="Link to this definition"></a></dt>
+<dd><p>Convert a UNIX timestamp to a human-readable format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>unix_timestamp</strong> (<em>int</em>) – UNIX timestamp.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Human-readable date and time in UTC.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-services.openweather_timemachine">
+<span id="services-openweather-timemachine-module"></span><h2>services.openweather_timemachine module<a class="headerlink" href="#module-services.openweather_timemachine" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">services.openweather_timemachine.</span></span><span class="sig-name descname"><span class="pre">OpenWeatherTimemachine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Fetches historical weather data for specific timestamps using OpenWeather’s API
+and stores validated data in a database.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.json_file_path">
+<span class="sig-name descname"><span class="pre">json_file_path</span></span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.json_file_path" title="Link to this definition"></a></dt>
+<dd><p>Path to the input JSON file containing timestamps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.latitude">
+<span class="sig-name descname"><span class="pre">latitude</span></span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.latitude" title="Link to this definition"></a></dt>
+<dd><p>Latitude for the API query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.longitude">
+<span class="sig-name descname"><span class="pre">longitude</span></span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.longitude" title="Link to this definition"></a></dt>
+<dd><p>Longitude for the API query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.api_key">
+<span class="sig-name descname"><span class="pre">api_key</span></span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.api_key" title="Link to this definition"></a></dt>
+<dd><p>API key for OpenWeather.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.logger" title="Link to this definition"></a></dt>
+<dd><p>Logger for tracking operations and errors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging" title="src.services.api_logger.APILogging">APILogging</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.db_connection_string">
+<span class="sig-name descname"><span class="pre">db_connection_string</span></span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.db_connection_string" title="Link to this definition"></a></dt>
+<dd><p>Connection string for the weather database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.location_id">
+<span class="sig-name descname"><span class="pre">location_id</span></span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.location_id" title="Link to this definition"></a></dt>
+<dd><p>Identifier for the target location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.control">
+<span class="sig-name descname"><span class="pre">control</span></span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.control" title="Link to this definition"></a></dt>
+<dd><p>Manages API rate limiting and failure tracking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="api_control.html#src.services.api_control.APIControl" title="src.services.api_control.APIControl">APIControl</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.call_openweather_api">
+<span class="sig-name descname"><span class="pre">call_openweather_api</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unix_timestamp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_timestamps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">completed_timestamps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.call_openweather_api" title="Link to this definition"></a></dt>
+<dd><p>Make an API call to OpenWeather’s TimeMachine endpoint for a specific timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unix_timestamp</strong> (<em>int</em>) – The target UNIX timestamp.</p></li>
+<li><p><strong>total_timestamps</strong> (<em>int</em>) – Total number of timestamps being processed.</p></li>
+<li><p><strong>completed_timestamps</strong> (<em>int</em>) – Count of completed timestamps.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(Response data as dict, API call ID).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>SystemExit</strong> – For critical API or server errors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.check_for_duplicates">
+<span class="sig-name descname"><span class="pre">check_for_duplicates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.check_for_duplicates" title="Link to this definition"></a></dt>
+<dd><p>Check for duplicate timestamps in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timestamps</strong> (<em>list</em>) – List of UNIX timestamps to check.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Timestamps that are not duplicates.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.extract_and_validate_weather_data">
+<span class="sig-name descname"><span class="pre">extract_and_validate_weather_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_call_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.extract_and_validate_weather_data" title="Link to this definition"></a></dt>
+<dd><p>Extract and validate the weather data from the API response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Raw weather data from the API response.</p></li>
+<li><p><strong>api_call_id</strong> (<em>int</em>) – The ID associated with the API call for logging.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Validated weather data ready for database insertion, or None if validation fails.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>KeyError</strong> – If critical data is missing from the response.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.human_to_unix">
+<span class="sig-name descname"><span class="pre">human_to_unix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">human_timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.human_to_unix" title="Link to this definition"></a></dt>
+<dd><p>Convert a human-readable date to a UNIX timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>human_timestamp</strong> (<em>str</em>) – Date in “YYYY-MM-DD HH:MM” format.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Corresponding UNIX timestamp.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.load_json_input">
+<span class="sig-name descname"><span class="pre">load_json_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.load_json_input" title="Link to this definition"></a></dt>
+<dd><p>Load and validate the input timestamps from the JSON file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of timestamps.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>SystemExit</strong> – If the file is missing or the format is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.run" title="Link to this definition"></a></dt>
+<dd><p>Main method for executing the script’s functionality.
+- Loads and validates input timestamps.
+- Filters duplicates.
+- Processes and stores weather data for valid timestamps.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.store_weather_data">
+<span class="sig-name descname"><span class="pre">store_weather_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_call_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.store_weather_data" title="Link to this definition"></a></dt>
+<dd><p>Store validated weather data into the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Validated weather data ready for database insertion.</p></li>
+<li><p><strong>api_call_id</strong> (<em>int</em>) – The ID associated with the API call for tracking.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>1 if the data was successfully inserted, 0 otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>psycopg2.IntegrityError</strong> – If the data is already present in the database.</p></li>
+<li><p><strong>Exception</strong> – For other unexpected database errors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.openweather_timemachine.OpenWeatherTimemachine.unix_to_human">
+<span class="sig-name descname"><span class="pre">unix_to_human</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unix_timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.openweather_timemachine.OpenWeatherTimemachine.unix_to_human" title="Link to this definition"></a></dt>
+<dd><p>Convert a UNIX timestamp to a human-readable format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>unix_timestamp</strong> (<em>int</em>) – UNIX timestamp.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Human-readable date and time in UTC.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-services">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-services" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ow_db_dashboard.html" class="btn btn-neutral float-left" title="ow_db_dashboard module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kevin Thoele.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

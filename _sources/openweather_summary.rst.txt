@@ -1,0 +1,7 @@
+openweather\_summary module
+===========================
+
+.. automodule:: src.services.openweather_summary
+   :members:
+   :undoc-members:
+   :show-inheritance:

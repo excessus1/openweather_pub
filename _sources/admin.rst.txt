@@ -1,0 +1,7 @@
+admin module
+============
+
+.. automodule:: src.services.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+config\_menu module
+===================
+
+.. automodule:: scripts.config_menu
+   :members:
+   :undoc-members:
+   :show-inheritance:

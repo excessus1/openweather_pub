@@ -1,0 +1,1475 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index &mdash; OpenWeather Collector 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OpenWeather Collector
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">admin module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.add_credential"><code class="docutils literal notranslate"><span class="pre">add_credential()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.admin_menu"><code class="docutils literal notranslate"><span class="pre">admin_menu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.fetch_credential"><code class="docutils literal notranslate"><span class="pre">fetch_credential()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.get_api_logging_connection"><code class="docutils literal notranslate"><span class="pre">get_api_logging_connection()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.get_db_connection"><code class="docutils literal notranslate"><span class="pre">get_db_connection()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.prompt_for_key"><code class="docutils literal notranslate"><span class="pre">prompt_for_key()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.remove_credential"><code class="docutils literal notranslate"><span class="pre">remove_credential()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.show_credentials"><code class="docutils literal notranslate"><span class="pre">show_credentials()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin.html#src.services.admin.update_credential"><code class="docutils literal notranslate"><span class="pre">update_credential()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_control.html">api_control module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl"><code class="docutils literal notranslate"><span class="pre">APIControl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.check_daily_limit_reached"><code class="docutils literal notranslate"><span class="pre">APIControl.check_daily_limit_reached()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.check_failure_rate"><code class="docutils literal notranslate"><span class="pre">APIControl.check_failure_rate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.rate_limit_check"><code class="docutils literal notranslate"><span class="pre">APIControl.rate_limit_check()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.requests_today"><code class="docutils literal notranslate"><span class="pre">APIControl.requests_today()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_control.html#src.services.api_control.APIControl.update_requests_made_today"><code class="docutils literal notranslate"><span class="pre">APIControl.update_requests_made_today()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_logger.html">api_logger module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging"><code class="docutils literal notranslate"><span class="pre">APILogging</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.log_file"><code class="docutils literal notranslate"><span class="pre">APILogging.log_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.db_connection"><code class="docutils literal notranslate"><span class="pre">APILogging.db_connection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.ensure_log_file_exists"><code class="docutils literal notranslate"><span class="pre">APILogging.ensure_log_file_exists()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.get_api_prototype"><code class="docutils literal notranslate"><span class="pre">APILogging.get_api_prototype()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.handle_sql_failure"><code class="docutils literal notranslate"><span class="pre">APILogging.handle_sql_failure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.insert_tracking_log"><code class="docutils literal notranslate"><span class="pre">APILogging.insert_tracking_log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.log_api_call"><code class="docutils literal notranslate"><span class="pre">APILogging.log_api_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.log_event"><code class="docutils literal notranslate"><span class="pre">APILogging.log_event()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_logger.html#src.services.api_logger.APILogging.log_sql_insert"><code class="docutils literal notranslate"><span class="pre">APILogging.log_sql_insert()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config.html#src.config.config.ensure_directories_and_files"><code class="docutils literal notranslate"><span class="pre">ensure_directories_and_files()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#src.config.config.fill_credentials"><code class="docutils literal notranslate"><span class="pre">fill_credentials()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#src.config.config.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#src.config.config.set_defaults"><code class="docutils literal notranslate"><span class="pre">set_defaults()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config_menu.html">config_menu module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu"><code class="docutils literal notranslate"><span class="pre">ConfigMenu</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.clear_screen"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.clear_screen()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.create_custom_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.create_custom_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.display_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.display_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.main_menu"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.main_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.populate_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.populate_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.reset_default_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.reset_default_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.set_selected_config"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.set_selected_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.update_custom_profile"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.update_custom_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_menu.html#scripts.config_menu.ConfigMenu.view_profiles"><code class="docutils literal notranslate"><span class="pre">ConfigMenu.view_profiles()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config_manager.html">config_manager module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager"><code class="docutils literal notranslate"><span class="pre">ConfigManager</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.config_file"><code class="docutils literal notranslate"><span class="pre">ConfigManager.config_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.format_schema"><code class="docutils literal notranslate"><span class="pre">ConfigManager.format_schema</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.default_values"><code class="docutils literal notranslate"><span class="pre">ConfigManager.default_values</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.default_profile"><code class="docutils literal notranslate"><span class="pre">ConfigManager.default_profile</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.custom_profiles"><code class="docutils literal notranslate"><span class="pre">ConfigManager.custom_profiles</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.selected_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.selected_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.correct_value"><code class="docutils literal notranslate"><span class="pre">ConfigManager.correct_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.generate_profile"><code class="docutils literal notranslate"><span class="pre">ConfigManager.generate_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.load_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.load_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.load_schema"><code class="docutils literal notranslate"><span class="pre">ConfigManager.load_schema()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.reset_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.reset_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.save_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.save_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.validate_and_parse_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.validate_and_parse_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.validate_datetime"><code class="docutils literal notranslate"><span class="pre">ConfigManager.validate_datetime()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.validate_profile"><code class="docutils literal notranslate"><span class="pre">ConfigManager.validate_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_manager.html#src.config.config_manager.ConfigManager.write_selected_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.write_selected_config()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="create_databases.html">create_databases module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="create_databases.html#data.database_setup.create_databases.create_database_and_tables"><code class="docutils literal notranslate"><span class="pre">create_database_and_tables()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_databases.html#data.database_setup.create_databases.load_sql"><code class="docutils literal notranslate"><span class="pre">load_sql()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_databases.html#data.database_setup.create_databases.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="credential_fetch.html">credential_fetch module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch"><code class="docutils literal notranslate"><span class="pre">CredentialFetch</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.logs_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.logs_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.log_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.log_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.db_key_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.db_key_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.log_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.log_cipher</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.db_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.db_cipher</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.api_credential_fetch"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.api_credential_fetch()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="credential_manager.html">credential_manager module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager"><code class="docutils literal notranslate"><span class="pre">CredentialManager</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.logs_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.logs_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.log_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.log_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.db_key_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.db_key_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.log_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialManager.log_cipher</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.db_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialManager.db_cipher</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.fetch_credential"><code class="docutils literal notranslate"><span class="pre">CredentialManager.fetch_credential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.get_api_logging_connection"><code class="docutils literal notranslate"><span class="pre">CredentialManager.get_api_logging_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="credential_manager.html#src.services.credential_manager.CredentialManager.get_db_connection"><code class="docutils literal notranslate"><span class="pre">CredentialManager.get_db_connection()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="key_gen_menu.html">key_gen_menu module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.decrypt_message"><code class="docutils literal notranslate"><span class="pre">decrypt_message()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.encrypt_message"><code class="docutils literal notranslate"><span class="pre">encrypt_message()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.generate_new_key"><code class="docutils literal notranslate"><span class="pre">generate_new_key()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.load_from_file"><code class="docutils literal notranslate"><span class="pre">load_from_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.main_menu"><code class="docutils literal notranslate"><span class="pre">main_menu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_gen_menu.html#util.key_gen_menu.save_to_file"><code class="docutils literal notranslate"><span class="pre">save_to_file()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main_menu.html">main_menu module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.api_logs_submenu"><code class="docutils literal notranslate"><span class="pre">api_logs_submenu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.clear_screen"><code class="docutils literal notranslate"><span class="pre">clear_screen()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.graph_menu"><code class="docutils literal notranslate"><span class="pre">graph_menu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.location_data_submenu"><code class="docutils literal notranslate"><span class="pre">location_data_submenu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.main_menu"><code class="docutils literal notranslate"><span class="pre">main_menu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.plot_line_chart"><code class="docutils literal notranslate"><span class="pre">plot_line_chart()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.plot_wind_direction_radial"><code class="docutils literal notranslate"><span class="pre">plot_wind_direction_radial()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.plot_wind_rose"><code class="docutils literal notranslate"><span class="pre">plot_wind_rose()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.plot_word_cloud"><code class="docutils literal notranslate"><span class="pre">plot_word_cloud()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.recent_data_submenu"><code class="docutils literal notranslate"><span class="pre">recent_data_submenu()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.tail_log"><code class="docutils literal notranslate"><span class="pre">tail_log()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_api_call_types"><code class="docutils literal notranslate"><span class="pre">view_api_call_types()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_api_script_tracking"><code class="docutils literal notranslate"><span class="pre">view_api_script_tracking()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_location_daily_data"><code class="docutils literal notranslate"><span class="pre">view_location_daily_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_location_hourly_data"><code class="docutils literal notranslate"><span class="pre">view_location_hourly_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_locations"><code class="docutils literal notranslate"><span class="pre">view_locations()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_api_calls"><code class="docutils literal notranslate"><span class="pre">view_recent_api_calls()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_daily_data"><code class="docutils literal notranslate"><span class="pre">view_recent_daily_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_hourly_data"><code class="docutils literal notranslate"><span class="pre">view_recent_hourly_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_logs"><code class="docutils literal notranslate"><span class="pre">view_recent_logs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_menu.html#scripts.main_menu.view_recent_sql_handling"><code class="docutils literal notranslate"><span class="pre">view_recent_sql_handling()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openweather_historical_fill_daily.html">openweather_historical_fill_daily module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.create_batch_file"><code class="docutils literal notranslate"><span class="pre">create_batch_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.generate_missing_daily_timestamps"><code class="docutils literal notranslate"><span class="pre">generate_missing_daily_timestamps()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.parse_start_time"><code class="docutils literal notranslate"><span class="pre">parse_start_time()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.validate_time_range"><code class="docutils literal notranslate"><span class="pre">validate_time_range()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openweather_historical_fill_hourly.html">openweather_historical_fill_hourly module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.create_batch_file"><code class="docutils literal notranslate"><span class="pre">create_batch_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.generate_missing_timestamps"><code class="docutils literal notranslate"><span class="pre">generate_missing_timestamps()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.parse_start_time"><code class="docutils literal notranslate"><span class="pre">parse_start_time()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.validate_time_range"><code class="docutils literal notranslate"><span class="pre">validate_time_range()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openweather_summary.html">openweather_summary module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.json_file_path"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.json_file_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.latitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.latitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.longitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.longitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.location_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.location_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_key"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.logger"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.logger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.failed_requests"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.failed_requests</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.failed_sql_inserts"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.failed_sql_inserts</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.batch_call_requests"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.batch_call_requests</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.daily_limit"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.daily_limit</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.start_time"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.start_time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.db_connection_string"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.db_connection_string</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.platform"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.platform</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_type_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_type_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.script_name"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.script_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_alt_name"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_alt_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_type"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.control"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.control</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.call_openweather_api"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.call_openweather_api()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.check_for_duplicates"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.check_for_duplicates()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.convert_tz_to_seconds"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.convert_tz_to_seconds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.extract_and_validate_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.extract_and_validate_weather_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.human_to_unix"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.human_to_unix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.load_json_input"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.load_json_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.run"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.store_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.store_weather_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.unix_to_human"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.unix_to_human()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openweather_timemachine.html">openweather_timemachine module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.json_file_path"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.json_file_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.latitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.latitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.longitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.longitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.api_key"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.api_key</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.logger"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.logger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.db_connection_string"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.db_connection_string</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.location_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.location_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.control"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.control</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.call_openweather_api"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.call_openweather_api()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.check_for_duplicates"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.check_for_duplicates()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.extract_and_validate_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.extract_and_validate_weather_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.human_to_unix"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.human_to_unix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.load_json_input"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.load_json_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.run"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.store_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.store_weather_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.unix_to_human"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.unix_to_human()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ow_db_dashboard.html">ow_db_dashboard module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ow_db_dashboard.html#scripts.ow_db_dashboard.get_status"><code class="docutils literal notranslate"><span class="pre">get_status()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ow_db_dashboard.html#scripts.ow_db_dashboard.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ow_db_dashboard.html#scripts.ow_db_dashboard.status"><code class="docutils literal notranslate"><span class="pre">status()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="services.html">services package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="services.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#module-services.admin">services.admin module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.add_credential"><code class="docutils literal notranslate"><span class="pre">add_credential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.admin_menu"><code class="docutils literal notranslate"><span class="pre">admin_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.fetch_credential"><code class="docutils literal notranslate"><span class="pre">fetch_credential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.get_api_logging_connection"><code class="docutils literal notranslate"><span class="pre">get_api_logging_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.get_db_connection"><code class="docutils literal notranslate"><span class="pre">get_db_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.prompt_for_key"><code class="docutils literal notranslate"><span class="pre">prompt_for_key()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.remove_credential"><code class="docutils literal notranslate"><span class="pre">remove_credential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.show_credentials"><code class="docutils literal notranslate"><span class="pre">show_credentials()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.admin.update_credential"><code class="docutils literal notranslate"><span class="pre">update_credential()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#module-services.api_control">services.api_control module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.api_control.APIControl"><code class="docutils literal notranslate"><span class="pre">APIControl</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_control.APIControl.check_daily_limit_reached"><code class="docutils literal notranslate"><span class="pre">APIControl.check_daily_limit_reached()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_control.APIControl.check_failure_rate"><code class="docutils literal notranslate"><span class="pre">APIControl.check_failure_rate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_control.APIControl.rate_limit_check"><code class="docutils literal notranslate"><span class="pre">APIControl.rate_limit_check()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_control.APIControl.requests_today"><code class="docutils literal notranslate"><span class="pre">APIControl.requests_today()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_control.APIControl.update_requests_made_today"><code class="docutils literal notranslate"><span class="pre">APIControl.update_requests_made_today()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#module-services.api_logger">services.api_logger module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.api_logger.APILogging"><code class="docutils literal notranslate"><span class="pre">APILogging</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.log_file"><code class="docutils literal notranslate"><span class="pre">APILogging.log_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.db_connection"><code class="docutils literal notranslate"><span class="pre">APILogging.db_connection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.ensure_log_file_exists"><code class="docutils literal notranslate"><span class="pre">APILogging.ensure_log_file_exists()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.get_api_prototype"><code class="docutils literal notranslate"><span class="pre">APILogging.get_api_prototype()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.handle_sql_failure"><code class="docutils literal notranslate"><span class="pre">APILogging.handle_sql_failure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.insert_tracking_log"><code class="docutils literal notranslate"><span class="pre">APILogging.insert_tracking_log()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.log_api_call"><code class="docutils literal notranslate"><span class="pre">APILogging.log_api_call()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.log_event"><code class="docutils literal notranslate"><span class="pre">APILogging.log_event()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.api_logger.APILogging.log_sql_insert"><code class="docutils literal notranslate"><span class="pre">APILogging.log_sql_insert()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#module-services.credential_fetch">services.credential_fetch module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.credential_fetch.CredentialFetch"><code class="docutils literal notranslate"><span class="pre">CredentialFetch</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_fetch.CredentialFetch.logs_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.logs_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_fetch.CredentialFetch.log_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.log_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_fetch.CredentialFetch.db_key_file"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.db_key_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_fetch.CredentialFetch.log_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.log_cipher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_fetch.CredentialFetch.db_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.db_cipher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_fetch.CredentialFetch.api_credential_fetch"><code class="docutils literal notranslate"><span class="pre">CredentialFetch.api_credential_fetch()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#module-services.credential_manager">services.credential_manager module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager"><code class="docutils literal notranslate"><span class="pre">CredentialManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager.logs_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.logs_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager.log_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.log_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager.db_key_file"><code class="docutils literal notranslate"><span class="pre">CredentialManager.db_key_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager.log_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialManager.log_cipher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager.db_cipher"><code class="docutils literal notranslate"><span class="pre">CredentialManager.db_cipher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager.fetch_credential"><code class="docutils literal notranslate"><span class="pre">CredentialManager.fetch_credential()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager.get_api_logging_connection"><code class="docutils literal notranslate"><span class="pre">CredentialManager.get_api_logging_connection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.credential_manager.CredentialManager.get_db_connection"><code class="docutils literal notranslate"><span class="pre">CredentialManager.get_db_connection()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#module-services.openweather_summary">services.openweather_summary module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.json_file_path"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.json_file_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.latitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.latitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.longitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.longitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.location_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.location_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.api_key"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.logger"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.failed_requests"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.failed_requests</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.failed_sql_inserts"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.failed_sql_inserts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.batch_call_requests"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.batch_call_requests</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.daily_limit"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.daily_limit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.start_time"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.start_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.db_connection_string"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.db_connection_string</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.platform"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.platform</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.api_call_type_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_type_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.script_name"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.script_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.api_call_alt_name"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_alt_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.api_call_type"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.api_call_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.control"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.call_openweather_api"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.call_openweather_api()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.check_for_duplicates"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.check_for_duplicates()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.convert_tz_to_seconds"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.convert_tz_to_seconds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.extract_and_validate_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.extract_and_validate_weather_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.human_to_unix"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.human_to_unix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.load_json_input"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.load_json_input()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.run"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.store_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.store_weather_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_summary.OpenWeatherDailySummary.unix_to_human"><code class="docutils literal notranslate"><span class="pre">OpenWeatherDailySummary.unix_to_human()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#module-services.openweather_timemachine">services.openweather_timemachine module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.json_file_path"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.json_file_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.latitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.latitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.longitude"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.longitude</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.api_key"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.api_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.logger"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.db_connection_string"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.db_connection_string</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.location_id"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.location_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.control"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.call_openweather_api"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.call_openweather_api()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.check_for_duplicates"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.check_for_duplicates()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.extract_and_validate_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.extract_and_validate_weather_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.human_to_unix"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.human_to_unix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.load_json_input"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.load_json_input()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.run"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.store_weather_data"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.store_weather_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.unix_to_human"><code class="docutils literal notranslate"><span class="pre">OpenWeatherTimemachine.unix_to_human()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#module-services">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenWeather Collector</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Index</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.admin.add_credential">add_credential() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.add_credential">(in module src.services.admin)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.admin.admin_menu">admin_menu() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.admin_menu">(in module src.services.admin)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.api_call_alt_name">api_call_alt_name (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_alt_name">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.api_call_type">api_call_type (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_type">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.api_call_type_id">api_call_type_id (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_call_type_id">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.credential_fetch.CredentialFetch.api_credential_fetch">api_credential_fetch() (services.credential_fetch.CredentialFetch method)</a>
+
+      <ul>
+        <li><a href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.api_credential_fetch">(src.services.credential_fetch.CredentialFetch method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.api_key">api_key (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.api_key">(services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.api_key">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.api_key">(src.services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="main_menu.html#scripts.main_menu.api_logs_submenu">api_logs_submenu() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="services.html#services.api_control.APIControl">APIControl (class in services.api_control)</a>
+
+      <ul>
+        <li><a href="api_control.html#src.services.api_control.APIControl">(class in src.services.api_control)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.api_logger.APILogging">APILogging (class in services.api_logger)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging">(class in src.services.api_logger)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.batch_call_requests">batch_call_requests (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.batch_call_requests">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.call_openweather_api">call_openweather_api() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.call_openweather_api">(services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.call_openweather_api">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.call_openweather_api">(src.services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.api_control.APIControl.check_daily_limit_reached">check_daily_limit_reached() (services.api_control.APIControl method)</a>
+
+      <ul>
+        <li><a href="api_control.html#src.services.api_control.APIControl.check_daily_limit_reached">(src.services.api_control.APIControl method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.api_control.APIControl.check_failure_rate">check_failure_rate() (services.api_control.APIControl method)</a>
+
+      <ul>
+        <li><a href="api_control.html#src.services.api_control.APIControl.check_failure_rate">(src.services.api_control.APIControl method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.check_for_duplicates">check_for_duplicates() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.check_for_duplicates">(services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.check_for_duplicates">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.check_for_duplicates">(src.services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+      </ul></li>
+      <li><a href="main_menu.html#scripts.main_menu.clear_screen">clear_screen() (in module scripts.main_menu)</a>
+
+      <ul>
+        <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.clear_screen">(scripts.config_menu.ConfigMenu method)</a>
+</li>
+      </ul></li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.config_file">config_file (src.config.config_manager.ConfigManager attribute)</a>
+</li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager">ConfigManager (class in src.config.config_manager)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config_menu.html#scripts.config_menu.ConfigMenu">ConfigMenu (class in scripts.config_menu)</a>
+</li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.control">control (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.control">(services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.control">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.control">(src.services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.convert_tz_to_seconds">convert_tz_to_seconds() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.convert_tz_to_seconds">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+      </ul></li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.correct_value">correct_value() (src.config.config_manager.ConfigManager method)</a>
+</li>
+      <li><a href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.create_batch_file">create_batch_file() (in module scripts.openweather_historical_fill_daily)</a>
+
+      <ul>
+        <li><a href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.create_batch_file">(in module scripts.openweather_historical_fill_hourly)</a>
+</li>
+      </ul></li>
+      <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.create_custom_profile">create_custom_profile() (scripts.config_menu.ConfigMenu method)</a>
+</li>
+      <li><a href="create_databases.html#data.database_setup.create_databases.create_database_and_tables">create_database_and_tables() (in module data.database_setup.create_databases)</a>
+</li>
+      <li><a href="services.html#services.credential_fetch.CredentialFetch">CredentialFetch (class in services.credential_fetch)</a>
+
+      <ul>
+        <li><a href="credential_fetch.html#src.services.credential_fetch.CredentialFetch">(class in src.services.credential_fetch)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.credential_manager.CredentialManager">CredentialManager (class in services.credential_manager)</a>
+
+      <ul>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager">(class in src.services.credential_manager)</a>
+</li>
+      </ul></li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.custom_profiles">custom_profiles (src.config.config_manager.ConfigManager attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.daily_limit">daily_limit (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.daily_limit">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+      <li>
+    data.database_setup.create_databases
+
+      <ul>
+        <li><a href="create_databases.html#module-data.database_setup.create_databases">module</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.credential_fetch.CredentialFetch.db_cipher">db_cipher (services.credential_fetch.CredentialFetch attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.credential_manager.CredentialManager.db_cipher">(services.credential_manager.CredentialManager attribute)</a>
+</li>
+        <li><a href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.db_cipher">(src.services.credential_fetch.CredentialFetch attribute)</a>
+</li>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager.db_cipher">(src.services.credential_manager.CredentialManager attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.api_logger.APILogging.db_connection">db_connection (services.api_logger.APILogging attribute)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.db_connection">(src.services.api_logger.APILogging attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.db_connection_string">db_connection_string (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.db_connection_string">(services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.db_connection_string">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.db_connection_string">(src.services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.credential_fetch.CredentialFetch.db_key_file">db_key_file (services.credential_fetch.CredentialFetch attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.credential_manager.CredentialManager.db_key_file">(services.credential_manager.CredentialManager attribute)</a>
+</li>
+        <li><a href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.db_key_file">(src.services.credential_fetch.CredentialFetch attribute)</a>
+</li>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager.db_key_file">(src.services.credential_manager.CredentialManager attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="key_gen_menu.html#util.key_gen_menu.decrypt_message">decrypt_message() (in module util.key_gen_menu)</a>
+</li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.default_profile">default_profile (src.config.config_manager.ConfigManager attribute)</a>
+</li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.default_values">default_values (src.config.config_manager.ConfigManager attribute)</a>
+</li>
+      <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.display_profile">display_profile() (scripts.config_menu.ConfigMenu method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="key_gen_menu.html#util.key_gen_menu.encrypt_message">encrypt_message() (in module util.key_gen_menu)</a>
+</li>
+      <li><a href="config.html#src.config.config.ensure_directories_and_files">ensure_directories_and_files() (in module src.config.config)</a>
+</li>
+      <li><a href="services.html#services.api_logger.APILogging.ensure_log_file_exists">ensure_log_file_exists() (services.api_logger.APILogging method)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.ensure_log_file_exists">(src.services.api_logger.APILogging method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.extract_and_validate_weather_data">extract_and_validate_weather_data() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.extract_and_validate_weather_data">(services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.extract_and_validate_weather_data">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.extract_and_validate_weather_data">(src.services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.failed_requests">failed_requests (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.failed_requests">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.failed_sql_inserts">failed_sql_inserts (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.failed_sql_inserts">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.admin.fetch_credential">fetch_credential() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.fetch_credential">(in module src.services.admin)</a>
+</li>
+        <li><a href="services.html#services.credential_manager.CredentialManager.fetch_credential">(services.credential_manager.CredentialManager method)</a>
+</li>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager.fetch_credential">(src.services.credential_manager.CredentialManager method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config.html#src.config.config.fill_credentials">fill_credentials() (in module src.config.config)</a>
+</li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.format_schema">format_schema (src.config.config_manager.ConfigManager attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.generate_missing_daily_timestamps">generate_missing_daily_timestamps() (in module scripts.openweather_historical_fill_daily)</a>
+</li>
+      <li><a href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.generate_missing_timestamps">generate_missing_timestamps() (in module scripts.openweather_historical_fill_hourly)</a>
+</li>
+      <li><a href="key_gen_menu.html#util.key_gen_menu.generate_new_key">generate_new_key() (in module util.key_gen_menu)</a>
+</li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.generate_profile">generate_profile() (src.config.config_manager.ConfigManager method)</a>
+</li>
+      <li><a href="services.html#services.admin.get_api_logging_connection">get_api_logging_connection() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.get_api_logging_connection">(in module src.services.admin)</a>
+</li>
+        <li><a href="services.html#services.credential_manager.CredentialManager.get_api_logging_connection">(services.credential_manager.CredentialManager method)</a>
+</li>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager.get_api_logging_connection">(src.services.credential_manager.CredentialManager method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.api_logger.APILogging.get_api_prototype">get_api_prototype() (services.api_logger.APILogging method)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.get_api_prototype">(src.services.api_logger.APILogging method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.admin.get_db_connection">get_db_connection() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.get_db_connection">(in module src.services.admin)</a>
+</li>
+        <li><a href="services.html#services.credential_manager.CredentialManager.get_db_connection">(services.credential_manager.CredentialManager method)</a>
+</li>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager.get_db_connection">(src.services.credential_manager.CredentialManager method)</a>
+</li>
+      </ul></li>
+      <li><a href="ow_db_dashboard.html#scripts.ow_db_dashboard.get_status">get_status() (in module scripts.ow_db_dashboard)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.graph_menu">graph_menu() (in module scripts.main_menu)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.api_logger.APILogging.handle_sql_failure">handle_sql_failure() (services.api_logger.APILogging method)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.handle_sql_failure">(src.services.api_logger.APILogging method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.human_to_unix">human_to_unix() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.human_to_unix">(services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.human_to_unix">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.human_to_unix">(src.services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="ow_db_dashboard.html#scripts.ow_db_dashboard.index">index() (in module scripts.ow_db_dashboard)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.api_logger.APILogging.insert_tracking_log">insert_tracking_log() (services.api_logger.APILogging method)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.insert_tracking_log">(src.services.api_logger.APILogging method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.json_file_path">json_file_path (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.json_file_path">(services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.json_file_path">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.json_file_path">(src.services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.latitude">latitude (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.latitude">(services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.latitude">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.latitude">(src.services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="config.html#src.config.config.load_config">load_config() (in module src.config.config)</a>
+
+      <ul>
+        <li><a href="config_manager.html#src.config.config_manager.ConfigManager.load_config">(src.config.config_manager.ConfigManager method)</a>
+</li>
+      </ul></li>
+      <li><a href="key_gen_menu.html#util.key_gen_menu.load_from_file">load_from_file() (in module util.key_gen_menu)</a>
+</li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.load_json_input">load_json_input() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.load_json_input">(services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.load_json_input">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.load_json_input">(src.services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+      </ul></li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.load_schema">load_schema() (src.config.config_manager.ConfigManager method)</a>
+</li>
+      <li><a href="create_databases.html#data.database_setup.create_databases.load_sql">load_sql() (in module data.database_setup.create_databases)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.location_data_submenu">location_data_submenu() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.location_id">location_id (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.location_id">(services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.location_id">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.location_id">(src.services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.api_logger.APILogging.log_api_call">log_api_call() (services.api_logger.APILogging method)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.log_api_call">(src.services.api_logger.APILogging method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.credential_fetch.CredentialFetch.log_cipher">log_cipher (services.credential_fetch.CredentialFetch attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.credential_manager.CredentialManager.log_cipher">(services.credential_manager.CredentialManager attribute)</a>
+</li>
+        <li><a href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.log_cipher">(src.services.credential_fetch.CredentialFetch attribute)</a>
+</li>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager.log_cipher">(src.services.credential_manager.CredentialManager attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.api_logger.APILogging.log_event">log_event() (services.api_logger.APILogging method)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.log_event">(src.services.api_logger.APILogging method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.api_logger.APILogging.log_file">log_file (services.api_logger.APILogging attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.credential_fetch.CredentialFetch.log_file">(services.credential_fetch.CredentialFetch attribute)</a>
+</li>
+        <li><a href="services.html#services.credential_manager.CredentialManager.log_file">(services.credential_manager.CredentialManager attribute)</a>
+</li>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.log_file">(src.services.api_logger.APILogging attribute)</a>
+</li>
+        <li><a href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.log_file">(src.services.credential_fetch.CredentialFetch attribute)</a>
+</li>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager.log_file">(src.services.credential_manager.CredentialManager attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.api_logger.APILogging.log_sql_insert">log_sql_insert() (services.api_logger.APILogging method)</a>
+
+      <ul>
+        <li><a href="api_logger.html#src.services.api_logger.APILogging.log_sql_insert">(src.services.api_logger.APILogging method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.logger">logger (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.logger">(services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.logger">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.logger">(src.services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.credential_fetch.CredentialFetch.logs_file">logs_file (services.credential_fetch.CredentialFetch attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.credential_manager.CredentialManager.logs_file">(services.credential_manager.CredentialManager attribute)</a>
+</li>
+        <li><a href="credential_fetch.html#src.services.credential_fetch.CredentialFetch.logs_file">(src.services.credential_fetch.CredentialFetch attribute)</a>
+</li>
+        <li><a href="credential_manager.html#src.services.credential_manager.CredentialManager.logs_file">(src.services.credential_manager.CredentialManager attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.longitude">longitude (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.longitude">(services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.longitude">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.longitude">(src.services.openweather_timemachine.OpenWeatherTimemachine attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="create_databases.html#data.database_setup.create_databases.main">main() (in module data.database_setup.create_databases)</a>
+
+      <ul>
+        <li><a href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.main">(in module scripts.openweather_historical_fill_daily)</a>
+</li>
+        <li><a href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.main">(in module scripts.openweather_historical_fill_hourly)</a>
+</li>
+        <li><a href="services.html#services.admin.main">(in module services.admin)</a>
+</li>
+        <li><a href="admin.html#src.services.admin.main">(in module src.services.admin)</a>
+</li>
+      </ul></li>
+      <li><a href="main_menu.html#scripts.main_menu.main_menu">main_menu() (in module scripts.main_menu)</a>
+
+      <ul>
+        <li><a href="key_gen_menu.html#util.key_gen_menu.main_menu">(in module util.key_gen_menu)</a>
+</li>
+        <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.main_menu">(scripts.config_menu.ConfigMenu method)</a>
+</li>
+      </ul></li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="create_databases.html#module-data.database_setup.create_databases">data.database_setup.create_databases</a>
+</li>
+        <li><a href="config_menu.html#module-scripts.config_menu">scripts.config_menu</a>
+</li>
+        <li><a href="main_menu.html#module-scripts.main_menu">scripts.main_menu</a>
+</li>
+        <li><a href="openweather_historical_fill_daily.html#module-scripts.openweather_historical_fill_daily">scripts.openweather_historical_fill_daily</a>
+</li>
+        <li><a href="openweather_historical_fill_hourly.html#module-scripts.openweather_historical_fill_hourly">scripts.openweather_historical_fill_hourly</a>
+</li>
+        <li><a href="ow_db_dashboard.html#module-scripts.ow_db_dashboard">scripts.ow_db_dashboard</a>
+</li>
+        <li><a href="services.html#module-services">services</a>
+</li>
+        <li><a href="services.html#module-services.admin">services.admin</a>
+</li>
+        <li><a href="services.html#module-services.api_control">services.api_control</a>
+</li>
+        <li><a href="services.html#module-services.api_logger">services.api_logger</a>
+</li>
+        <li><a href="services.html#module-services.credential_fetch">services.credential_fetch</a>
+</li>
+        <li><a href="services.html#module-services.credential_manager">services.credential_manager</a>
+</li>
+        <li><a href="services.html#module-services.openweather_summary">services.openweather_summary</a>
+</li>
+        <li><a href="services.html#module-services.openweather_timemachine">services.openweather_timemachine</a>
+</li>
+        <li><a href="config.html#module-src.config.config">src.config.config</a>
+</li>
+        <li><a href="config_manager.html#module-src.config.config_manager">src.config.config_manager</a>
+</li>
+        <li><a href="admin.html#module-src.services.admin">src.services.admin</a>
+</li>
+        <li><a href="api_control.html#module-src.services.api_control">src.services.api_control</a>
+</li>
+        <li><a href="api_logger.html#module-src.services.api_logger">src.services.api_logger</a>
+</li>
+        <li><a href="credential_fetch.html#module-src.services.credential_fetch">src.services.credential_fetch</a>
+</li>
+        <li><a href="credential_manager.html#module-src.services.credential_manager">src.services.credential_manager</a>
+</li>
+        <li><a href="openweather_summary.html#module-src.services.openweather_summary">src.services.openweather_summary</a>
+</li>
+        <li><a href="openweather_timemachine.html#module-src.services.openweather_timemachine">src.services.openweather_timemachine</a>
+</li>
+        <li><a href="key_gen_menu.html#module-util.key_gen_menu">util.key_gen_menu</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary">OpenWeatherDailySummary (class in services.openweather_summary)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary">(class in src.services.openweather_summary)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine">OpenWeatherTimemachine (class in services.openweather_timemachine)</a>
+
+      <ul>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine">(class in src.services.openweather_timemachine)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.parse_start_time">parse_start_time() (in module scripts.openweather_historical_fill_daily)</a>
+
+      <ul>
+        <li><a href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.parse_start_time">(in module scripts.openweather_historical_fill_hourly)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.platform">platform (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.platform">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="main_menu.html#scripts.main_menu.plot_line_chart">plot_line_chart() (in module scripts.main_menu)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="main_menu.html#scripts.main_menu.plot_wind_direction_radial">plot_wind_direction_radial() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.plot_wind_rose">plot_wind_rose() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.plot_word_cloud">plot_word_cloud() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.populate_profile">populate_profile() (scripts.config_menu.ConfigMenu method)</a>
+</li>
+      <li><a href="services.html#services.admin.prompt_for_key">prompt_for_key() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.prompt_for_key">(in module src.services.admin)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.api_control.APIControl.rate_limit_check">rate_limit_check() (services.api_control.APIControl method)</a>
+
+      <ul>
+        <li><a href="api_control.html#src.services.api_control.APIControl.rate_limit_check">(src.services.api_control.APIControl method)</a>
+</li>
+      </ul></li>
+      <li><a href="main_menu.html#scripts.main_menu.recent_data_submenu">recent_data_submenu() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="services.html#services.admin.remove_credential">remove_credential() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.remove_credential">(in module src.services.admin)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.api_control.APIControl.requests_today">requests_today() (services.api_control.APIControl method)</a>
+
+      <ul>
+        <li><a href="api_control.html#src.services.api_control.APIControl.requests_today">(src.services.api_control.APIControl method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.reset_config">reset_config() (src.config.config_manager.ConfigManager method)</a>
+</li>
+      <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.reset_default_profile">reset_default_profile() (scripts.config_menu.ConfigMenu method)</a>
+</li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.run">run() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.run">(services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.run">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.run">(src.services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.save_config">save_config() (src.config.config_manager.ConfigManager method)</a>
+</li>
+      <li><a href="key_gen_menu.html#util.key_gen_menu.save_to_file">save_to_file() (in module util.key_gen_menu)</a>
+</li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.script_name">script_name (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.script_name">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+      <li>
+    scripts.config_menu
+
+      <ul>
+        <li><a href="config_menu.html#module-scripts.config_menu">module</a>
+</li>
+      </ul></li>
+      <li>
+    scripts.main_menu
+
+      <ul>
+        <li><a href="main_menu.html#module-scripts.main_menu">module</a>
+</li>
+      </ul></li>
+      <li>
+    scripts.openweather_historical_fill_daily
+
+      <ul>
+        <li><a href="openweather_historical_fill_daily.html#module-scripts.openweather_historical_fill_daily">module</a>
+</li>
+      </ul></li>
+      <li>
+    scripts.openweather_historical_fill_hourly
+
+      <ul>
+        <li><a href="openweather_historical_fill_hourly.html#module-scripts.openweather_historical_fill_hourly">module</a>
+</li>
+      </ul></li>
+      <li>
+    scripts.ow_db_dashboard
+
+      <ul>
+        <li><a href="ow_db_dashboard.html#module-scripts.ow_db_dashboard">module</a>
+</li>
+      </ul></li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.selected_config">selected_config (src.config.config_manager.ConfigManager attribute)</a>
+</li>
+      <li>
+    services
+
+      <ul>
+        <li><a href="services.html#module-services">module</a>
+</li>
+      </ul></li>
+      <li>
+    services.admin
+
+      <ul>
+        <li><a href="services.html#module-services.admin">module</a>
+</li>
+      </ul></li>
+      <li>
+    services.api_control
+
+      <ul>
+        <li><a href="services.html#module-services.api_control">module</a>
+</li>
+      </ul></li>
+      <li>
+    services.api_logger
+
+      <ul>
+        <li><a href="services.html#module-services.api_logger">module</a>
+</li>
+      </ul></li>
+      <li>
+    services.credential_fetch
+
+      <ul>
+        <li><a href="services.html#module-services.credential_fetch">module</a>
+</li>
+      </ul></li>
+      <li>
+    services.credential_manager
+
+      <ul>
+        <li><a href="services.html#module-services.credential_manager">module</a>
+</li>
+      </ul></li>
+      <li>
+    services.openweather_summary
+
+      <ul>
+        <li><a href="services.html#module-services.openweather_summary">module</a>
+</li>
+      </ul></li>
+      <li>
+    services.openweather_timemachine
+
+      <ul>
+        <li><a href="services.html#module-services.openweather_timemachine">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config.html#src.config.config.set_defaults">set_defaults() (in module src.config.config)</a>
+</li>
+      <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.set_selected_config">set_selected_config() (scripts.config_menu.ConfigMenu method)</a>
+</li>
+      <li><a href="services.html#services.admin.show_credentials">show_credentials() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.show_credentials">(in module src.services.admin)</a>
+</li>
+      </ul></li>
+      <li>
+    src.config.config
+
+      <ul>
+        <li><a href="config.html#module-src.config.config">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.config.config_manager
+
+      <ul>
+        <li><a href="config_manager.html#module-src.config.config_manager">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.services.admin
+
+      <ul>
+        <li><a href="admin.html#module-src.services.admin">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.services.api_control
+
+      <ul>
+        <li><a href="api_control.html#module-src.services.api_control">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.services.api_logger
+
+      <ul>
+        <li><a href="api_logger.html#module-src.services.api_logger">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.services.credential_fetch
+
+      <ul>
+        <li><a href="credential_fetch.html#module-src.services.credential_fetch">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.services.credential_manager
+
+      <ul>
+        <li><a href="credential_manager.html#module-src.services.credential_manager">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.services.openweather_summary
+
+      <ul>
+        <li><a href="openweather_summary.html#module-src.services.openweather_summary">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.services.openweather_timemachine
+
+      <ul>
+        <li><a href="openweather_timemachine.html#module-src.services.openweather_timemachine">module</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.start_time">start_time (services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+
+      <ul>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.start_time">(src.services.openweather_summary.OpenWeatherDailySummary attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="ow_db_dashboard.html#scripts.ow_db_dashboard.status">status() (in module scripts.ow_db_dashboard)</a>
+</li>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.store_weather_data">store_weather_data() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.store_weather_data">(services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.store_weather_data">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.store_weather_data">(src.services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="main_menu.html#scripts.main_menu.tail_log">tail_log() (in module scripts.main_menu)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="services.html#services.openweather_summary.OpenWeatherDailySummary.unix_to_human">unix_to_human() (services.openweather_summary.OpenWeatherDailySummary method)</a>
+
+      <ul>
+        <li><a href="services.html#services.openweather_timemachine.OpenWeatherTimemachine.unix_to_human">(services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+        <li><a href="openweather_summary.html#src.services.openweather_summary.OpenWeatherDailySummary.unix_to_human">(src.services.openweather_summary.OpenWeatherDailySummary method)</a>
+</li>
+        <li><a href="openweather_timemachine.html#src.services.openweather_timemachine.OpenWeatherTimemachine.unix_to_human">(src.services.openweather_timemachine.OpenWeatherTimemachine method)</a>
+</li>
+      </ul></li>
+      <li><a href="services.html#services.admin.update_credential">update_credential() (in module services.admin)</a>
+
+      <ul>
+        <li><a href="admin.html#src.services.admin.update_credential">(in module src.services.admin)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.update_custom_profile">update_custom_profile() (scripts.config_menu.ConfigMenu method)</a>
+</li>
+      <li><a href="services.html#services.api_control.APIControl.update_requests_made_today">update_requests_made_today() (services.api_control.APIControl method)</a>
+
+      <ul>
+        <li><a href="api_control.html#src.services.api_control.APIControl.update_requests_made_today">(src.services.api_control.APIControl method)</a>
+</li>
+      </ul></li>
+      <li>
+    util.key_gen_menu
+
+      <ul>
+        <li><a href="key_gen_menu.html#module-util.key_gen_menu">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.validate_and_parse_config">validate_and_parse_config() (src.config.config_manager.ConfigManager method)</a>
+</li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.validate_datetime">validate_datetime() (src.config.config_manager.ConfigManager method)</a>
+</li>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.validate_profile">validate_profile() (src.config.config_manager.ConfigManager method)</a>
+</li>
+      <li><a href="openweather_historical_fill_daily.html#scripts.openweather_historical_fill_daily.validate_time_range">validate_time_range() (in module scripts.openweather_historical_fill_daily)</a>
+
+      <ul>
+        <li><a href="openweather_historical_fill_hourly.html#scripts.openweather_historical_fill_hourly.validate_time_range">(in module scripts.openweather_historical_fill_hourly)</a>
+</li>
+      </ul></li>
+      <li><a href="main_menu.html#scripts.main_menu.view_api_call_types">view_api_call_types() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.view_api_script_tracking">view_api_script_tracking() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.view_location_daily_data">view_location_daily_data() (in module scripts.main_menu)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="main_menu.html#scripts.main_menu.view_location_hourly_data">view_location_hourly_data() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.view_locations">view_locations() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="config_menu.html#scripts.config_menu.ConfigMenu.view_profiles">view_profiles() (scripts.config_menu.ConfigMenu method)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.view_recent_api_calls">view_recent_api_calls() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.view_recent_daily_data">view_recent_daily_data() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.view_recent_hourly_data">view_recent_hourly_data() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.view_recent_logs">view_recent_logs() (in module scripts.main_menu)</a>
+</li>
+      <li><a href="main_menu.html#scripts.main_menu.view_recent_sql_handling">view_recent_sql_handling() (in module scripts.main_menu)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="config_manager.html#src.config.config_manager.ConfigManager.write_selected_config">write_selected_config() (src.config.config_manager.ConfigManager method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kevin Thoele.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

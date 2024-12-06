@@ -1,0 +1,7 @@
+create\_databases module
+========================
+
+.. automodule:: data.database_setup.create_databases
+   :members:
+   :undoc-members:
+   :show-inheritance:

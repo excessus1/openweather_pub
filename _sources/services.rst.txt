@@ -1,0 +1,69 @@
+services package
+================
+
+Submodules
+----------
+
+services.admin module
+---------------------
+
+.. automodule:: services.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+services.api\_control module
+----------------------------
+
+.. automodule:: services.api_control
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+services.api\_logger module
+---------------------------
+
+.. automodule:: services.api_logger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+services.credential\_fetch module
+---------------------------------
+
+.. automodule:: services.credential_fetch
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+services.credential\_manager module
+-----------------------------------
+
+.. automodule:: services.credential_manager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+services.openweather\_summary module
+------------------------------------
+
+.. automodule:: services.openweather_summary
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+services.openweather\_timemachine module
+----------------------------------------
+
+.. automodule:: services.openweather_timemachine
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: services
+   :members:
+   :undoc-members:
+   :show-inheritance:

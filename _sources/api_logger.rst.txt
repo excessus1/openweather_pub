@@ -1,0 +1,7 @@
+api\_logger module
+==================
+
+.. automodule:: src.services.api_logger
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+openweather\_timemachine module
+===============================
+
+.. automodule:: src.services.openweather_timemachine
+   :members:
+   :undoc-members:
+   :show-inheritance:

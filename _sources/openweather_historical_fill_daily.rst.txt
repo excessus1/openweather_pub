@@ -1,0 +1,7 @@
+openweather\_historical\_fill\_daily module
+===========================================
+
+.. automodule:: scripts.openweather_historical_fill_daily
+   :members:
+   :undoc-members:
+   :show-inheritance:

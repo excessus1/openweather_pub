@@ -1,0 +1,7 @@
+key\_gen\_menu module
+=====================
+
+.. automodule:: util.key_gen_menu
+   :members:
+   :undoc-members:
+   :show-inheritance:
