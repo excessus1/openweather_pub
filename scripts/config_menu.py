@@ -229,6 +229,8 @@ class ConfigMenu:
                     new_value = input(f"{setting} (current: {value}): ").strip()
                     if new_value.isdigit():
                         profile[category][setting] = int(new_value)
+                    elif new_value.lstrip('-').replace('.', '', 1).isdigit():
+                        profile[category][setting] = float(new_value)
                     elif new_value:
                         profile[category][setting] = new_value
         # Save updated profile
