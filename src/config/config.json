@@ -50,11 +50,11 @@
     },
     "sequential": {
       "time_machine": {
-        "batch_limit": 100,
+        "batch_limit": 5,
         "hours_history": 240000
       },
       "daily_summary": {
-        "batch_limit": 10,
+        "batch_limit": 5,
         "days_history": 10000
       },
       "location": {
@@ -69,5 +69,5 @@
       }
     }
   },
-  "selected_config": "pinpoint"
+  "selected_config": "sequential"
 }
